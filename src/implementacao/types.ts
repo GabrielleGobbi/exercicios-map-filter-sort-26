@@ -19,7 +19,7 @@ export type Students = {
     }
 }[]
 
-const approvalGrade = 7;
+export const approvalGrade = 7;
 
 export const classRom : Students = [
     { nome: "Ashley", prova: { p1: 5.6, p2: 6.7, p3: 9 } },
