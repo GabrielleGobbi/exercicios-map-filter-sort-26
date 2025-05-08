@@ -4,7 +4,7 @@ export type Student ={
     approved : boolean;
 };
 
-const students: Student[] = [
+export const students: Student[] = [
     { name: "Ashley", grades: 7.1, approved: true }, 
     { name: "Sabrina", grades: 7.9, approved: true },
     { name: "Samantha", grades: 5.0, approved: false }
