@@ -2,24 +2,23 @@ import classData from '../db/classData.json';
 
 interface Student {
     name: string;
-    grades: number;
-    approved: boolean;
+    grades: number;   // nota única
 }
 
 interface ClassData {
     students: Student[];
     approvalGrade: number;
-    classRom: any;
+    classRoom?: any;
 }
 
-function approved(students: Student[], approvalGrade: number): string[] {
+function getApprovedNames(students: Student[], approvalGrade: number): string[] {
     return students
         .filter(student => student.grades >= approvalGrade)
         .map(student => student.name);
 }
 
-// Execução da função para obter os aprovados e imprimi-los no console
-const aprovados = approved(classData.students, classData.approvalGrade);
+const aprovados = getApprovedNames(classData.students, classData.approvalGrade);
 
 console.log('Alunos Aprovados:', aprovados);
-export { approved, Student, ClassData };
+
+export { getApprovedNames, Student, ClassData };
