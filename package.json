@@ -1,10 +1,20 @@
 {
+  "name": "exercicios-arrays",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "node run-exercise.js"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "@types/node": "^22.3.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "ts-jest": "^29.2.4",
+    "ts-node": "10.9.2",
+    "typescript": "5.5.4"
   }
 }

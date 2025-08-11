@@ -1,0 +1,9 @@
+{
+  "students": [
+    { "name": "Ashley", "grades": 8, "approved": true },
+    { "name": "Sabrina", "grades": 9, "approved": true },
+    { "name": "Lucas", "grades": 6, "approved": false }
+  ],
+  "approvalGrade": 7,
+  "classRom": "Sala 404"
+}
