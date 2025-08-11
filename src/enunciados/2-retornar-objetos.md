@@ -1,4 +1,4 @@
-4) Fazer uma função que receba a lista pre constuida retorne um array de objetos com as seguintes propriedades:
+2) Fazer uma função que receba a lista pre constuida retorne um array de objetos com as seguintes propriedades:
 ```javascript
   [
       { 

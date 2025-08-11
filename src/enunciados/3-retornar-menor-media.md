@@ -1,1 +1,1 @@
-6) Fazer uma função que retorne o nome da aluna com menor nota
+3) Fazer uma função que retorne o nome da aluna com menor nota
