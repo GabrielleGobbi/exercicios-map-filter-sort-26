@@ -1,24 +1,18 @@
+import { getApprovedNames } from '../implementacao/1-Aproved-return';
 import classData from '../db/classData.json';
 
-interface Student {
-    name: string;
-    grades: number;   // nota única
-}
+describe('getApprovedNames', () => {
+  test('retorna apenas os nomes dos alunos aprovados', () => {
+    const result = getApprovedNames(classData.students, classData.approvalGrade);
+    expect(result).toEqual(['Ashley', 'Sabrina']);
+  });
 
-interface ClassData {
-    students: Student[];
-    approvalGrade: number;
-    classRoom?: any;
-}
-
-function getApprovedNames(students: Student[], approvalGrade: number): string[] {
-    return students
-        .filter(student => student.grades >= approvalGrade)
-        .map(student => student.name);
-}
-
-const aprovados = getApprovedNames(classData.students, classData.approvalGrade);
-
-console.log('Alunos Aprovados:', aprovados);
-
-export { getApprovedNames, Student, ClassData };
+  test('retorna array vazio se nenhum aluno for aprovado', () => {
+    const students = [
+      { name: 'Aluno 1', grades: 5 },
+      { name: 'Aluno 2', grades: 6 }
+    ];
+    const result = getApprovedNames(students, 7);
+    expect(result).toEqual([]);
+  });
+});

@@ -1,36 +1,24 @@
+import { calcularMediaEStatus } from '../implementacao/2-Objects-return';
 import classData from '../db/classData.json';
 
-interface Student {
-  name: string;
-  grades: number; 
-  approved: boolean;
-}
+describe('calcularMediaEStatus', () => {
+  test('deve calcular a média e status de aprovação corretamente', () => {
+    const result = calcularMediaEStatus(classData.students, classData.approvalGrade);
 
-interface ClassData {
-  students: Student[];
-  approvalGrade: number;
-  classRom?: any;       
-}
-
-interface Resultado {
-  nome: string;
-  media: number;
-  aprovada: boolean;
-}
-
-function calcularMediaEStatus(students: Student[], approvalGrade: number): Resultado[] {
-  return students.map(student => {
-    const media = student.grades;  // só um número mesmo
-    const aprovada = media >= approvalGrade;
-    return {
-      nome: student.name,
-      media: Number(media.toFixed(1)), 
-      aprovada
-    };
+    expect(result).toEqual([
+      { nome: 'Ashley', media: 8.0, aprovada: true },
+      { nome: 'Sabrina', media: 9.0, aprovada: true },
+      { nome: 'Lucas', media: 6.0, aprovada: false }
+    ]);
   });
-}
 
-const resultado = calcularMediaEStatus(classData.students, classData.approvalGrade);
-console.log(resultado);
+  test('deve retornar todas como reprovadas se a nota de corte for alta', () => {
+    const result = calcularMediaEStatus(classData.students, 10);
 
-export { calcularMediaEStatus, Student, ClassData, Resultado };
+    expect(result).toEqual([
+      { nome: 'Ashley', media: 8.0, aprovada: false },
+      { nome: 'Sabrina', media: 9.0, aprovada: false },
+      { nome: 'Lucas', media: 6.0, aprovada: false }
+    ]);
+  });
+});

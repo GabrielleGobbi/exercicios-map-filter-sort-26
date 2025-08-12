@@ -8,6 +8,6 @@ module.exports = {
   },
   testMatch: ["**/tests/**/*.test.ts"],
   testPathIgnorePatterns: ["/node_modules/"],
-  reporters: ["./custom-test-results-processor"],
+  // reporters: ["./custom-test-results-processor"], // removido
   cache: false
 };
