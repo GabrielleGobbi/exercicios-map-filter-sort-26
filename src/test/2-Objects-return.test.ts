@@ -22,3 +22,4 @@ describe('calcularMediaEStatus', () => {
     ]);
   });
 });
+export default test ;

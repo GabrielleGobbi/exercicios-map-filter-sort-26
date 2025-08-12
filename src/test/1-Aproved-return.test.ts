@@ -16,3 +16,5 @@ describe('getApprovedNames', () => {
     expect(result).toEqual([]);
   });
 });
+
+export default test ;
