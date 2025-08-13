@@ -1,4 +1,4 @@
-import classData from '../db/classData.json';
+import classData from '../db/ClassData.json';
 
 export interface Student {
   name: string;

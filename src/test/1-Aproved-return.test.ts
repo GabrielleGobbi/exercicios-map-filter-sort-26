@@ -1,5 +1,5 @@
 import { getApprovedNames } from '../implementacao/1-Aproved-return';
-import classData from '../db/classData.json';
+import classData from '../db/ClassData.json';
 
 describe('getApprovedNames', () => {
   test('retorna apenas os nomes dos alunos aprovados', () => {
@@ -17,4 +17,4 @@ describe('getApprovedNames', () => {
   });
 });
 
-export default test ;
+export default test;

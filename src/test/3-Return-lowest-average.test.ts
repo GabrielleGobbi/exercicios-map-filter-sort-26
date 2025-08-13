@@ -1,5 +1,5 @@
 import { getLowestGradeStudent } from '../implementacao/3-Return-lowest-average';
-import classData from '../db/classData.json';
+import classData from '../db/ClassData.json';
 
 describe('getLowestGradeStudent', () => {
   test('deve retornar o nome da aluna com menor nota', () => {

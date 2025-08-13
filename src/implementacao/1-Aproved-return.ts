@@ -1,4 +1,4 @@
-import classData from '../db/classData.json';
+import classData from '../db/ClassData.json';
 
 export interface Student {
   name: string;
@@ -8,7 +8,6 @@ export interface Student {
 export interface ClassData {
   students: Student[];
   approvalGrade: number;
-  classRoom?: string;
 }
 
 export function getApprovedNames(students: Student[], approvalGrade: number): string[] {
@@ -16,5 +15,7 @@ export function getApprovedNames(students: Student[], approvalGrade: number): st
     .filter(student => student.grades >= approvalGrade)
     .map(student => student.name);
 }
+
+console.log(getApprovedNames(classData.students, classData.approvalGrade));
 
 export const approvedFromJson = getApprovedNames(classData.students, classData.approvalGrade);

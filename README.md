@@ -21,7 +21,16 @@ Respeito às boas práticas de código: Procure manter o código limpo e organiz
 
 - Leia com atenção os exercicios dentro da pasta enunciados 
 - Crie a lógica de cada exercicio dentro da pasta implementacao
-- Para rodar um exercicio especifico dentro da pasta implementacao é necessário usar o comando ``npm run start -- nome-do-arquivo.ts``
+
+- Utilize os arquivos JSON da pasta db caso precise de listas pré-prontas para suas implementações.
+
+- Para verificar se suas implementações passaram, execute os testes pelo botão de Play (Code Runner) no VS Code.
+Abra um arquivo de exercício ou um arquivo de teste.
+
+- Clique no ícone ▶ no canto superior direito do editor.
+
+O script custom-test-results-processor.js exibirá no terminal uma mensagem de sucesso, caso passe no teste ou uma mensagem de insucesso, caso falhe.
+
 
 ## Observações
 
@@ -29,4 +38,8 @@ Respeito às boas práticas de código: Procure manter o código limpo e organiz
 2) para estar aprovada a aluna tem que ter media igual ou acima de 7
 3) Para esse exercicio voces não poderão usar o `for`, `while` ou `do while`
 4) Formula da média: `(a + b + c) / 3`
-5) o arquivo "listaPreConstruida.ts"contem o um array pronto para ser utilizado durante os exercicios, lembrem-se de importar o array e tipo para cada arquivo de exercicio.
+5) Para rodar os testes, é necessário que a extensão Code Runner esteja instalada no VS Code.
+6) Verifique so o seu VS Code está atualizado, pois a execução pode não acontecer, caso existam atualizações pendentes.
+7) o arquivo "ClassData.json", que está dentro da pasta db, contem um array pronto para ser utilizado durante os exercicios, lembrem-se de importar o array e tipo para cada arquivo de exercicio.
+8) Se quiser vizualizar a saída dos exercícios no terminal, rode o exercício específico dentro da pasta implementação, usando o comando ``npm run start -- nome-do-arquivo.ts``.
+
