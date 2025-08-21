@@ -1,5 +1,5 @@
-import { calcularMediaEStatus } from '../implementacao/2-Objects-return';
-import classData from '../db/ClassData.json';
+import { calcularMediaEStatus } from '../src/implementacao/2-Objects-return';
+import classData from '../src/db/ClassData.json';
 
 describe('calcularMediaEStatus', () => {
   test('deve calcular a média e status de aprovação corretamente', () => {
